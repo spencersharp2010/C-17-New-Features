@@ -4,6 +4,8 @@ Some brief code I wrote to showcase a few new language features of C++17. Specif
 * `constexpr` lambda functions 
 * capturing `*this` in lambda functions
 
+**Note**: you must compile with either `-std=c++17` or `-std=c++2a` compiler flag with g++.
+
 ## `if constexpr`
 This allows for compile-time evaluation of an `if` statement. It is typically used in conjunction with templates and some Boolean operator. The unused branch of the `if` statement is discarded, meaning it does not have to be able to compile.
 
