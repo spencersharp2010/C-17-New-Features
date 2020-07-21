@@ -1,13 +1,18 @@
+// simple script to demonstrate a few new features of C++17
+// note: must compile with -std=c++17 or -std=c++2a flag
+
 #include <iostream>
 #include <array>
 #include <vector>
 #include <algorithm>
 
+// constexpr - computed at compile time
 constexpr long int fib(int n)
 {
     return (n <= 1)? n : fib(n-1) + fib(n-2);
 }
 
+// class with two constexpr member functions
 class Rectangle
 {
     int _width, _height;
@@ -16,7 +21,7 @@ public:
     constexpr double getArea() const {return _width * _height; }
 };
 
-
+// function with templated input
 template<class T>
 double m2_to_ft2(T input)
 {
